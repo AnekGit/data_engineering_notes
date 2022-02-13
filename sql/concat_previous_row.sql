@@ -22,9 +22,17 @@ with ds as (
 )
 select col1 ,col2 , agg, occ ,
 instr(agg||',' , ',' ,1,occ) comma_occ,
+
+-- instr(agg||',' ...)
 -- append comma so that in the comma_occ there should not be any zero and our results are streamlined 
 -- debug prev step then revise 
--- 1st row => first occ of comma  2nd row => 2nd occ of comma
+
+-- instr(agg,',',1,occ)
+-- 1st row => 1st occ of comma starting from position 1 
+-- 2nd row => 2nd occ of comma starting from position 1 
+-- 3rd row => 3rd occ of comma starting from position 1 
+
+ 
 substr(agg,1,instr(agg||',' , ',' ,1,occ)-1)
 from ds ; 
 
