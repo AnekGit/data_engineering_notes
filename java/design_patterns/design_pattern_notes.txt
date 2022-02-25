@@ -1,0 +1,21 @@
+Design Pattern 
+----------------------
+1. GOF Design Patterns 
+2. JEE Design Pattern
+
+GOF 
+-----
+1. Singleton :
+
+Ex : 
+ Logger Class , PropertyReader class , DataSource class 
+
+
+2. Factory : 
+Ex : 
+
+DriverManager.getConnection(String conString)
+DriverManager is a Factory class and getConnection is Factory method.
+
+
+
