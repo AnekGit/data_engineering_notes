@@ -16,11 +16,11 @@ insert into t values(120);
 insert into t values(125);
 
 select c from (
-select 
-c,
-lead(c,1) over (order by c) c_lead,
-lag(c,1) over (order by c ) c_lag
-from t 
+				select 
+				c,
+				lead(c,1) over (order by c) c_lead,
+				lag(c,1) over (order by c ) c_lag
+				from t 
 )
 where c = c_lead-1 or c = c_lag+1;
 

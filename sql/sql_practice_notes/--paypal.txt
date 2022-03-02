@@ -1,0 +1,25 @@
+-- palindrome.txt
+
+program 
+
+void palindrome(int number){
+
+int n = 454 ;
+int r ,sum = 0 ,temp = n ;
+
+while(n>0){
+r = n % 10 ; // getting remainder 
+sum = (sum * 10) + r    // sum = 0+4 = 4  , n= 45  sum = 40+5 = 45 , n = 4 sum = 450+4 = 454 
+n = n / 10 ;
+
+}
+if (sum == temp) println("palindrome")
+else {
+    println("not palindrome")
+}
+
+
+
+
+}
+
